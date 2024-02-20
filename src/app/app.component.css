@@ -1,0 +1,177 @@
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  padding: 0 10px 0 10px;
+}
+
+.left, .center, .right{
+  display: flex;
+  flex-direction: column;
+  min-width: 20vw;
+}
+
+.card, .card1 {
+  width: auto;
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card.long, .center .card, .card1 {
+  width: 94%;
+  height: auto;
+}
+
+.card h2, .center .card h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.center .card form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center input {
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 8px;
+  color:#333
+}
+
+.center .card form .input-group label {
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 16px;
+}
+
+.center .card form .input-group input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.center .card form input[type="submit"] {
+  padding: 8px 36px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.center .card .subscribed {
+  margin: 10px 0;
+  color: #666;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  font-size: 11px;
+  color:#666 ;
+}
+
+.symbol {
+  color: green;
+  font-size: 12px;
+}
+
+.sort-icon {
+  font-size: 10px;
+}
+
+tr {
+  border-bottom: 1px solid #000;
+}
+
+.card3 {
+  width: auto;
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card3 h2 {
+  color: #333;
+}
+.tabledata {
+  width: 100%;
+}
+
+.symbol {
+  font-size: 12px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .center, .right {
+    min-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .card, .card1, .card3 {
+    width: 90%;
+  }
+
+  .card.long, .center .card, .card1 {
+    width: 90%;
+  }
+
+  .tabledata {
+    overflow-x: auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .left, .center, .right {
+    min-width: 90%;
+  }
+
+  .card, .card1, .card3 {
+    width: 95%;
+  }
+
+  .card.long, .center .card, .card1 {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .left, .center, .right {
+    min-width: 100%;
+  }
+
+  .card, .card1, .card3 {
+    width: 100%;
+  }
+
+  .card.long, .center .card, .card1 {
+    width: 100%;
+  }
+}
+
+
+
+
+

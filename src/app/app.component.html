@@ -1,0 +1,67 @@
+
+<div class="dashboard">
+  <div class="left">
+    <div class="card">
+      <h2>REL</h2>
+    </div>
+    
+    <div class="card">
+      <h2>INFY</h2>
+    </div>
+  </div>
+  
+  <div class="center">
+    <div class="card long">
+      <h2>Subscribe to Symbol</h2>
+      <form (submit)="addSymbol($event, symbol.value, industry.value); symbol.value=''; industry.value=''">
+        <input type="text" #symbol placeholder="Symbol">
+        <input type="text" #industry placeholder="Industry">
+        <input type="submit" value="Add">
+      </form>
+      <div class="subscribed">
+        <p>Subscribed Symbols: {{ subscribedSymbols.join(' ') }}</p>
+      </div>
+    </div>
+  
+    <div class="tabledata">
+      <div class="card1">
+        <table>
+          <tr>
+            <th><button (click)="sortSymbols()"> ↕️ </button>Symbols</th>
+            <th>Open Price</th>
+            <th>High Price</th>
+            <th>Low Price</th>
+            <th>Close Price</th>
+            <th>Volume</th>
+          </tr>
+          <tr *ngFor="let symbol of symbols">
+            <td>
+              {{ symbol.symbol }}<br>
+              <span class="symbol" [style.color]="getIndustryColor(symbol.industry)">{{ symbol.industry }}</span>
+            </td>
+            <td>{{ symbol.openPrice.toFixed(2) }}</td>
+            <td>{{ symbol.highPrice.toFixed(2) }}</td>
+            <td>{{ symbol.lowPrice.toFixed(2) }}</td>
+            <td>{{ symbol.closePrice.toFixed(2) }}</td>
+            <td>{{ symbol.volume }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="right">
+    <div class="card3">
+      <h2>Card TR</h2>
+    </div>
+  
+    <div class="card3">
+      <h2>Card MR</h2>
+    </div>
+  
+    <div class="card3">
+      <h2>Card BR</h2>
+    </div>
+  </div>
+</div>
